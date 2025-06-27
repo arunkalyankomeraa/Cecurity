@@ -1,0 +1,137 @@
+{
+  "name": "code-security-analyzer",
+  "displayName": "Code Security Analyzer",
+  "description": "Real-time code security analysis and best practices checker",
+  "version": "0.1.0",
+  "publisher": "security-tools",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/code-security-analyzer"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Linters",
+    "Security"
+  ],
+  "keywords": [
+    "security",
+    "analyzer",
+    "linter",
+    "sql injection",
+    "xss",
+    "ai"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "security-analyzer.analyze",
+        "title": "Analyze Code Security",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "security-analyzer.showReport",
+        "title": "Show Security Report",
+        "icon": "$(report)"
+      },
+      {
+        "command": "security-analyzer.aiAnalyze",
+        "title": "AI Security Analysis",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "security-analyzer.setOpenAIKey",
+        "title": "Set OpenAI API Key",
+        "icon": "$(key)"
+      }
+    ],
+    "configuration": {
+      "title": "Code Security Analyzer",
+      "properties": {
+        "securityAnalyzer.openAIKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API Key for AI-powered analysis"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "security-analyzer",
+          "title": "Security Analyzer",
+          "icon": "$(shield)"
+        }
+      ]
+    },
+    "views": {
+      "security-analyzer": [
+        {
+          "id": "securityIssues",
+          "name": "Security Issues"
+        },
+        {
+          "id": "securityScore",
+          "name": "Security Score"
+        }
+      ]
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "command": "security-analyzer.analyze",
+          "group": "navigation"
+        },
+        {
+          "command": "security-analyzer.aiAnalyze",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "vsce": "vsce package",
+    "dev": "webpack --watch --mode development"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.98.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.13.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.2",
+    "vsce": "^1.97.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "eslint-plugin-security": "^1.7.1",
+    "openai": "^4.0.0"
+  }
+}

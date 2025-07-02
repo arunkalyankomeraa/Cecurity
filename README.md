@@ -39,3 +39,6 @@ Please report issues on the GitHub repository.
 
 ## Demo
 [![Cecurity Demo video](https://img.youtube.com/vi/xAc0NL5Ljig/maxresdefault.jpg)](https://youtu.be/xAc0NL5Ljig)
+
+## Specifications
+![Specifications](https://github.com/arunkalyankomeraa/Cecurity/blob/main/images/CodeSeciriryTool.png "Specs")

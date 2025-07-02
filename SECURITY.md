@@ -2,7 +2,9 @@
 
 ## Supported Versions
 
-Please Use Visual Studio Code Extension Development Environment and hit "Run"
+Please use the Visual Studio Code Extension Development Environment and hit "Run" to start coding.
+Happy coding!
+Please Use Your own OpenAI API to enable AI analysis
 
 ## Reporting a Vulnerability
 

@@ -38,4 +38,4 @@ This extension contributes the following settings:
 Please report issues on the GitHub repository.
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xAc0NL5Ljig?si=NExaMcfu0Hane9Yf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Cecurity Demo video](https://img.youtube.com/vi/xAc0NL5Ljig/maxresdefault.jpg)](https://youtu.be/xAc0NL5Ljig)
